@@ -9,6 +9,12 @@
     jobs:
       build:
         runs-on: ubuntu-latest
+        # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
+        permissions:
+          contents: read
+          packages: read
+          attestations: read
+          id-token: read
         steps:
           - name: Checkout code
             uses: actions/checkout@v4
@@ -21,5 +27,5 @@
             with:
               artifact-ids: 3809340209  # Name of the artifact to download
               repository: rzfeeser/RepoA # Owner and name of the source repository
-              github-token: ${{ secrets.PERSONAL_TOKEN }} # Your PAT secret
+              github-token: ${{ secrets.GITHUB_TOKEN }} # Your PAT secret
               run-id: 17101300932 # Optional: Run ID of the workflow that uploaded the artifact
