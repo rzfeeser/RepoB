@@ -17,7 +17,7 @@
               echo "Build triggered by: ${{ github.event.client_payload.source_repo }}"
 
           - name: Download Artifact from Another Repository
-            uses: actions/download-artifact@v5
+            uses: actions/download-artifact@v4
             with:
               name: my-generated-artifact  # Name of the artifact to download
               repository: rzfeeser/RepoA # Owner and name of the source repository
