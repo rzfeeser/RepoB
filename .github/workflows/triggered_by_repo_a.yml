@@ -2,6 +2,7 @@
     name: Build Triggered by Repository A
 
     on:
+      workflow_dispatch:
       repository_dispatch:
         types: [build_triggered_by_repo_a]
 
