@@ -1,13 +1,13 @@
     # .github/workflows/triggered_by_repo_a.yml in Repository B
-    name: Build Triggered by Repository A
+    name: RepoB Triggered by RepoA
 
     on:
       workflow_dispatch:
-      repository_dispatch:
-        types: [build_triggered_by_repo_a]
+      #repository_dispatch:
+      #  types: [build_triggered_by_repo_a]
 
     jobs:
-      build:
+      triggered_by_repo_a:
         runs-on: ubuntu-latest
         # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
         permissions:
