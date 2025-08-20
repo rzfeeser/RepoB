@@ -22,4 +22,4 @@
               name: my-generated-artifact  # Name of the artifact to download
               repository: rzfeeser/RepoA # Owner and name of the source repository
               github-token: ${{ secrets.PERSONAL_TOKEN }} # Your PAT secret
-              run-id: 17100757193 # Optional: Run ID of the workflow that uploaded the artifact
+              run-id: ${{ github.event.client_payload.run_id }} # Optional: Run ID of the workflow that uploaded the artifact
