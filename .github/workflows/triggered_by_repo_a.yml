@@ -19,7 +19,7 @@
           - name: Download Artifact from Another Repository
             uses: actions/download-artifact@v4
             with:
-              name: my-generated-artifact  # Name of the artifact to download
+              artifact-ids: 3809340209  # Name of the artifact to download
               repository: rzfeeser/RepoA # Owner and name of the source repository
               github-token: ${{ secrets.PERSONAL_TOKEN }} # Your PAT secret
               run-id: 17101300932 # Optional: Run ID of the workflow that uploaded the artifact
