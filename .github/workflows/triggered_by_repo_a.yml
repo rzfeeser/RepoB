@@ -1,0 +1,17 @@
+    # .github/workflows/triggered_by_repo_a.yml in Repository B
+    name: Build Triggered by Repository A
+
+    on:
+      repository_dispatch:
+        types: [build_triggered_by_repo_a]
+
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v4
+          - name: Process payload
+            run: |
+              echo "Build triggered by: ${{ github.event.client_payload.source_repo }}"
+              # Add your build steps here
