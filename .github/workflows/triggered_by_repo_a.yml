@@ -15,4 +15,12 @@
           - name: Process payload
             run: |
               echo "Build triggered by: ${{ github.event.client_payload.source_repo }}"
-              # Add your build steps here
+
+          - name: Download Artifact from Another Repository
+            uses: actions/download-artifact@v4
+            with:
+              name: my-generated-artifact  # Name of the artifact to download
+              path: generated-file.txt # Directory to download to
+              repository: rzfeeser/RepoA- # Owner and name of the source repository
+              github-token: ${{ secrets.PERSONAL_TOKEN }} # Your PAT secret
+              #run-id: 123456789 # Optional: Run ID of the workflow that uploaded the artifact
