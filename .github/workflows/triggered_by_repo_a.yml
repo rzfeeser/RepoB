@@ -36,4 +36,4 @@
               run-id: ${{ github.event.inputs.artifact-run-id }}
 
           - name: Show the artifact we just downloaded
-            run: ls
+            run: cat my-generated-artifact/generated-file.txt
