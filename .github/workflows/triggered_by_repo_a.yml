@@ -7,7 +7,6 @@
             description: 'What is the RUN ID to pull the artifact from?'
             required: true
             type: string
-            default: ''
       #repository_dispatch:
       #  types: [build_triggered_by_repo_a]
 
