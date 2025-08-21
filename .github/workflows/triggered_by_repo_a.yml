@@ -36,4 +36,6 @@
               run-id: ${{ github.event.inputs.artifact-run-id }}
 
           - name: Show the artifact we just downloaded
-            run: cat generated-file.txt   # this should display a timestamp created by RepoA
+            run: |
+              unzip my-generated-artifact.zip
+              cat generated-file.txt   # this should display a timestamp created by RepoA
