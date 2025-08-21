@@ -3,6 +3,7 @@
 
     on:
       workflow_dispatch:
+        inputs:
           artifact-run-id:
             description: 'What is the RUN ID to pull the artifact from?'
             required: true
